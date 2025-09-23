@@ -1,17 +1,8 @@
-A,B = map(str,input().split())
-a= list(A)
-b= list(B)
-a[0] , a[2] = a[2] , a[0]
-b[0] , b[2] = b[2] , b[0]
-total1 =''
-total2 =''
-for i in range(3):
-    total1 += a[i]
-    total2 += b[i]
-c = int(total1)
-d = int(total2)
+def rev3(n):
+    a = n % 10
+    b = (n // 10) % 10
+    c = n // 100
+    return a*100 + b*10 + c
 
-if c >= d :
-    print(c)
-else:
-    print(d)
+A, B = map(int, input().split())
+print(max(rev3(A), rev3(B)))
