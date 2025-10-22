@@ -3,11 +3,11 @@
 int main(void)
 {
     double distance , min;
-    int deg=0, i, j;
+    int deg = 0, i, j;
 
     double rader[360];
 
-    for (i=0; i < 10; i++)
+    for (i=0; i < 10; i++)        //테스트용으로 10개만 
         scanf("%lf", &rader[i]);
     
     for (j=0; j<3; j++)
@@ -16,7 +16,7 @@ int main(void)
 
         for (i=0; i<10; i++)
         {
-            if ((rader[i] < min) && (rader[i] != 0)) {
+            if (rader[i] < min) { 
                 min = rader[i];
                 deg = i;    
             }
