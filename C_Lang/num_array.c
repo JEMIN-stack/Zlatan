@@ -5,7 +5,7 @@ int main(void){
     
     scanf("%d", &N);
     
-    int dist[N+10];
+    int dist[N];
     
     for (i=0; i<N; i++){
         scanf("%d", &dist[i]);
