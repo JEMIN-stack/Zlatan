@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(void){
     int i,j,M,N;
-    int N_array[100];
+    int N_array[10000];
     int count = 0;
     int count_final = 0;
     int sum = 0;
@@ -17,6 +17,8 @@ int main(void){
     }
     
     for (i=0; i< N-M+1 ; i++){
+        count = 0;
+
         if (N_array[i] == 1)
             continue;
 
@@ -25,9 +27,9 @@ int main(void){
                 count += 1;
             }
         }
+    
         if (count == 0) {
             count_final += 1;
-            count = 0;
             sum += N_array[i];
             min_array[idx] = N_array[i];
             idx ++;
