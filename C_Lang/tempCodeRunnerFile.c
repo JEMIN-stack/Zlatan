@@ -1,2 +1,1 @@
-
-            
+char addresses[MAX_LINES][MAX_ADDR_LEN];
