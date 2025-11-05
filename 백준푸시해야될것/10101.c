@@ -21,8 +21,6 @@ void three_degree(int *p){
     if ((*(p+0) == 60) && (*(p+0) == *(p+1)) && (*(p+0) == *(p+2))){
         printf("Equilateral");
     }
-    else if (*(p+0)+*(p+1)+*(p+2) == 180) || (*(p+0) == *(p+1)) || (*(p+0) == *(p+2)) || (*(p+1) == *(p+2)){
-        printf("Isosceles");
-    }
+
 
 }
