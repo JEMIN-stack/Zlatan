@@ -20,19 +20,19 @@ int main(void){
         }
         else {
             int B_real = *pb;
-            int i = 2;
-           
-            for (i=2; i < B_real/2; i++){
-                while (*pb % i == 0){
+            int multi = 1;
+
+            for (int i=2; i < B_real/2; i++){
+                while ((*pb % i == 0) && (*pa % i == 0)){
+
                     *pb = *pb / i;
-                    if (*pa % i == 0){
-                        *pa = *pa / i;
-                    }
+                    *pa = *pa / i;
+                    multi *= i;
                 }
             }
-            printf("%d\n",(*pa)*B_real);
+            int lcm = multi * (*pa) * (*pb);
+            printf("%d\n", lcm);
         }
     }
-
     return 0;
 }
